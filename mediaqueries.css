@@ -1,23 +1,56 @@
-@media (width < 523px) and (width >= 461px){
-  .directory-buttons{
-    font-size: .85rem;
+/* gaming pc */
+@media (width > 1440px){
+  header{
+    grid-template: 100% / 6vw 1fr 30vw 1vw;
+    font-size: 1.2vw;  
+    border-bottom: .1vh solid var(--header-text-color);
+
+    .logo-box span{
+      font-size: 1.4em;
+
+      margin: .1em;
+      padding: .5em;
+      border: .33em solid var(--header-text-color);
+      border-radius: .5em;
+    }
   }
 }
 
-@media (width >= 523px){
-  .directory-buttons{
-    font-size: 1rem;
+/* tablet */
+@media (width <= 725px) and (width > 425px){
+  header{
+    grid-template: 100% / 14vw 1fr 75vw 1vw;
+    font-size: 3vw;  
+    border-bottom: 1px solid var(--header-text-color);
+
+    .logo-box span{
+      font-size: 1.4em;
+
+      margin: .1em;
+      padding: .5em;
+      border: .33em solid var(--header-text-color);
+      border-radius: .5em;
+    }
   }
 }
 
-@media (width < 460px) and (width >= 397px){
-  .directory-buttons{
-    font-size: .7rem;
+
+/* laptop */
+@media (width <= 1440px) and (width > 725px){
+  header{
+    grid-template: 100% / 8vw 1fr 40vw 1vw;
+    font-size: 1.6vw;  
+    border-bottom: 1px solid var(--header-text-color);
+
+    .logo-box span{
+      font-size: 1.35em;
+
+      margin: .1em;
+      padding: .5em;
+      border: .33em solid var(--header-text-color);
+      border-radius: .5em;
+    }
   }
 }
 
-@media (width < 397px){
-  .directory-buttons{
-    font-size: .64rem;
-  }
-}
+/* default is phone view*/

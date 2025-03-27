@@ -12,7 +12,6 @@
 body{
   margin: 0px;
 
-  /* font-size: 16px; */
   font-family: system-ui;
 
   background-color: var(--top-background-color);
@@ -22,36 +21,84 @@ body{
 
 header{
   display: grid;
-  grid-template: 100% / 80px 1fr 25px;
+  grid-template: 100% / 15vw 1vh 1fr 1vw;
 
-  height: 80px;
-  width: 100%;
-  border: 1px solid black;
-
-  font-size: 1.875rem;
+  font-size: 3.5vw;
   font-weight: 900;
 
+  height: fit-content;
+  width: 100%;
+  border-bottom: 1px solid black;
+
   color: var(--header-text-color);
+
+  .logo-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    span{
+      height: fit-content;
+      width: fit-content;
+    
+      font-size: 1.5em;
+
+      margin: .1em;
+      padding: .5em;
+      border: .33em solid var(--header-text-color);
+      border-radius: .5em;
+    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .directory-buttons{
+    grid-area: 1 / 3 / 1 / 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
-.logo-box{
-  margin: 5px;
-  border: 7px solid var(--header-text-color);
-  border-radius: 10px;
+main{
+  .intro{
+    box-sizing: border-box;
+    display: grid;
+    grid-template: 1fr 1fr 1fr/ 100%;
 
+    height: 750px;
+    width: 100%;
+  }
+}
+
+.disc-pic{
   display: flex;
   justify-content: center;
   align-items: center;
+
+  grid-area: 1 / 1 / 1 / 1;
+  height: 100%;
+  width: 100%;
+
+  /* img{
+    height: 325px;
+    width: 325px;
+    border: 5px solid var(--header-text-color);
+    border-radius: 100%;
+  } */
 }
 
-.directory-buttons{
+.intro-text{
   display: flex;
-  justify-content: end;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 2em;
+
+  height: 100%;
+  width: 100%;
 }
-
-
 
 .github{
   height: 32px;
@@ -74,39 +121,37 @@ footer{
   height: 80px;
   width: 100%;
 
-  font-size: .75em;
+  font-size: .95rem;
   font-weight: 900;
 
   color: var(--header-text-color);
   background-color: var(--footer-background-color);
+
+  span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
-footer span{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+.contact-me{
+  font-weight: 900;
 
-.footer-buttons{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  border: .3em solid var(--header-text-color);
+  border-radius: .5em; 
 
-footer .contact-me{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: fit-content; 
+  width: fit-content; 
 
-  margin: 5px;
-  border: 5px solid var(--header-text-color);
-  border-radius: 10px;
-
-  height: 1.1em;
-  width: 6em;
-
-  color: var(--header-text-color);
-  background-color: white;
+  color: inherit; /* has to be set explicitly for some reason... */
+  background-color: var(--footer-background-color);
+  text-decoration: none;
 }
 
 
