@@ -1,0 +1,23 @@
+@media (width < 523px) and (width >= 461px){
+  .directory-buttons{
+    font-size: .85rem;
+  }
+}
+
+@media (width >= 523px){
+  .directory-buttons{
+    font-size: 1rem;
+  }
+}
+
+@media (width < 460px) and (width >= 397px){
+  .directory-buttons{
+    font-size: .7rem;
+  }
+}
+
+@media (width < 397px){
+  .directory-buttons{
+    font-size: .64rem;
+  }
+}
